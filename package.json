@@ -8,5 +8,13 @@
     "bubble.is"
   ],
   "author": "lottemint.md",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lottemint/json-to-bubble-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lottemint/json-to-bubble-object/issues"
+  },
+  "homepage": "https://github.com/Lottemint/json-to-bubble-object#readme"
 }

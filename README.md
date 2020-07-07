@@ -1,22 +1,34 @@
 # json-to-bubble-object
 
 Convert a JSON object to a Bubble object for plugin purposes. (Bubble.is)
+<br>
+<br>This module relates to the following topic:
+<br>https://forum.bubble.io/t/output-an-object-for-server-side-client-side/59419
 
 
 ### Installing
-Step 1:
+<b>Step 1.</b>
+<br>You need to install the following module:
 
 ```
 npm i json-to-bubble-object
 ```
 
-Step 2:
+<br>
+<b>Step 2.</b>
+<br>Add the convert function from the installed module:
+
 
 ```javascript
 const {convert} = require('json-to-bubble-object');
 ```
 
-Step 3:
+<br>
+<b>Step 3.</b>
+<br>Now, you can convert any JSON object into a Bubble object.
+<br>That may help to avoid manual preparation of a large and complex object.
+<br>For example, let's use the following JSON:
+<br>
 
 ```javascript
 let obj = {
@@ -92,13 +104,19 @@ let obj = {
 };
 ```
 
-Step 4:
+<br>
+<b>Step 4.</b>
+<br>Let's output the converted object:
+<br>
 
 ```javascript
 console.log(convert(obj));
 ```
 
-Step 5 (output):
+<br>
+<b>Output:</b>
+<br>
+
 ```
 { _p_status: 'success',
   _p_locale: 'tr',
