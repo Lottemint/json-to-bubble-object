@@ -2,32 +2,6 @@
  * @param {Object} obj
  * @return {Object}
  */
-exports.nullClear = function (obj) {
-
-    if (!obj || typeof obj !== 'object') return {};
-
-    let nullClear = require('./index.js').nullClear;
-
-    for (let member in obj) {
-
-        if (obj[member] === null) {
-            delete obj[member];
-        } else if (typeof obj[member] === 'object') {
-            obj[member] = nullClear(obj[member]);
-            if (Object.keys(obj[member]).length === 0) {
-                delete obj[member];
-            }
-        }
-    }
-
-    return obj
-};
-
-
-/**
- * @param {Object} obj
- * @return {Object}
- */
 exports.convert = (obj) => {
 
     if (typeof obj !== 'object' || (obj && Array.isArray(obj))) return {};
@@ -40,8 +14,6 @@ exports.convert = (obj) => {
      * @return {Object}
      */
     const convert = (obj, key_parent, is_array) => {
-
-        const nullClear = require('./index.js').nullClear;
 
         let result = {};
 
@@ -78,7 +50,6 @@ exports.convert = (obj) => {
             }
         });
 
-        nullClear(result);
 
         return result
     };

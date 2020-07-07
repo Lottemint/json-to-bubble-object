@@ -110,62 +110,67 @@ let obj = {
 <br>
 
 ```javascript
-console.log(convert(obj));
+console.log(JSON.stringify(convert(obj)));
 ```
 
 <br>
 <b>Output:</b>
 <br>
 
-```
-{ _p_status: 'success',
-  _p_locale: 'tr',
-  _p_systemTime: 1470731191116,
-  _p_conversationId: '123456789',
-  _p_price: 1,
-  _p_paidPrice: 1.2,
-  _p_installment: 1,
-  _p_paymentId: '26143',
-  _p_fraudStatus: 1,
-  _p_merchantCommissionRate: 20,
-  _p_merchantCommissionRateAmount: 0.2,
-  _p_iyziCommissionRateAmount: 0.0354,
-  _p_iyziCommissionFee: 0.25,
-  _p_cardType: 'CREDIT_CARD',
-  _p_cardAssociation: 'MASTER_CARD',
-  _p_cardFamily: 'Cardfinans',
-  _p_cardToken: '123',
-  _p_cardUserKey: '123\'',
-  _p_binNumber: '531157',
-  _p_basketId: 'B67832',
-  _p_currency: 'TRY',
-  _p_itemTransactions:
-   [ { _p_itemId: 'BI101',
-       _p_paymentTransactionId: '38226',
-       _p_transactionStatus: 2,
-       _p_price: 0.3,
-       _p_paidPrice: 0.36,
-       _p_merchantCommissionRate: 20,
-       _p_merchantCommissionRateAmount: 0.06,
-       _p_iyziCommissionRateAmount: 0.01062,
-       _p_iyziCommissionFee: 0.075,
-       _p_blockageRate: 10,
-       _p_blockageRateAmountMerchant: 0.036,
-       _p_blockageResolvedDate: '2016-08-16 11:25:58',
-       _p_merchantPayoutAmount: 0.23838,
-       '_p_convertedPayout.paidPrice': 0.36,
-       '_p_convertedPayout.iyziCommissionRateAmount': 0.01062,
-       '_p_convertedPayout.iyziCommissionFee': 0.075,
-       '_p_convertedPayout.blockageRateAmountMerchant': 0.036,
-       '_p_convertedPayout.merchantPayoutAmount': 0.23838,
-       '_p_convertedPayout.currency': 'TRY' } ],
-  _p_token: '123',
-  _p_callbackUrl: 'https://www.merchant.com/callback',
-  _p_paymentStatus: 'SUCCESS',
-  '_p_test.a': 1,
-  '_p_test.b': 2,
-  '_p_test.c.c1': 1,
-  '_p_test.c.c2': 1,
-  '_p_test.c.c3.c31': 1,
-  '_p_test.c.c3.c32': 2 }
+```json
+{
+  "_p_status": "success",
+  "_p_locale": "tr",
+  "_p_systemTime": 1470731191116,
+  "_p_conversationId": "123456789",
+  "_p_price": 1,
+  "_p_paidPrice": 1.2,
+  "_p_installment": 1,
+  "_p_paymentId": "26143",
+  "_p_fraudStatus": 1,
+  "_p_merchantCommissionRate": 20,
+  "_p_merchantCommissionRateAmount": 0.2,
+  "_p_iyziCommissionRateAmount": 0.0354,
+  "_p_iyziCommissionFee": 0.25,
+  "_p_cardType": "CREDIT_CARD",
+  "_p_cardAssociation": "MASTER_CARD",
+  "_p_cardFamily": "Cardfinans",
+  "_p_cardToken": "123",
+  "_p_cardUserKey": "123'",
+  "_p_binNumber": "531157",
+  "_p_basketId": "B67832",
+  "_p_currency": "TRY",
+  "_p_itemTransactions": [
+    {
+      "_p_itemId": "BI101",
+      "_p_paymentTransactionId": "38226",
+      "_p_transactionStatus": 2,
+      "_p_price": 0.3,
+      "_p_paidPrice": 0.36,
+      "_p_merchantCommissionRate": 20,
+      "_p_merchantCommissionRateAmount": 0.06,
+      "_p_iyziCommissionRateAmount": 0.01062,
+      "_p_iyziCommissionFee": 0.075,
+      "_p_blockageRate": 10,
+      "_p_blockageRateAmountMerchant": 0.036,
+      "_p_blockageResolvedDate": "2016-08-16 11:25:58",
+      "_p_merchantPayoutAmount": 0.23838,
+      "_p_convertedPayout.paidPrice": 0.36,
+      "_p_convertedPayout.iyziCommissionRateAmount": 0.01062,
+      "_p_convertedPayout.iyziCommissionFee": 0.075,
+      "_p_convertedPayout.blockageRateAmountMerchant": 0.036,
+      "_p_convertedPayout.merchantPayoutAmount": 0.23838,
+      "_p_convertedPayout.currency": "TRY"
+    }
+  ],
+  "_p_token": "123",
+  "_p_callbackUrl": "https://www.merchant.com/callback",
+  "_p_paymentStatus": "SUCCESS",
+  "_p_test.a": 1,
+  "_p_test.b": 2,
+  "_p_test.c.c1": 1,
+  "_p_test.c.c2": 1,
+  "_p_test.c.c3.c31": 1,
+  "_p_test.c.c3.c32": 2
+}
 ```
