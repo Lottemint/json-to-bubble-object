@@ -24,7 +24,7 @@ exports.convert = (obj) => {
             if (key_parent && !is_array) key_new = `${key_parent}.${key}`;
 
 
-            if (!cell || typeof cell === 'undefined') {
+            if ((!cell && cell !== 0) || typeof cell === 'undefined') {
 
 
                 result[key_new] = null
