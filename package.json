@@ -1,6 +1,6 @@
 {
   "name": "json-to-bubble-object",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert a JSON object to a Bubble object for plugin purposes. (Bubble.is)",
   "main": "index.js",
   "scripts": {},
