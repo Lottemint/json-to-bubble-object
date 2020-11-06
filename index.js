@@ -41,12 +41,22 @@ exports.convert = (obj) => {
 
             } else if (Array.isArray(cell)) {
 
-                result[key_new] = [];
+                if ( typeof cell[0] === 'object' ) {
 
-                cell.forEach(value => {
+                    result[key_new] = [];
 
-                    result[key_new].push(convert(value, key_new, true))
-                })
+                    cell.forEach(value => {
+
+                        result[key_new].push(convert(value, key_new, true))
+                    })
+
+                } else {
+
+                    // It's not an object array, so treat
+                    // it as an array of Bubble primitives.
+                    //
+                    result[key_new] = cell;
+                }
             }
         });
 
