@@ -1,10 +1,13 @@
 /**
  * @param {Object} obj
+ * @param {string} [param_prefix] - _p_ (default) or _api_c2_.
  * @return {Object}
  */
-exports.convert = (obj) => {
+exports.convert = (obj, param_prefix) => {
 
     if (typeof obj !== 'object' || (obj && Array.isArray(obj))) return {};
+
+    if (typeof param_prefix !== 'string' || !param_prefix || (typeof param_prefix === 'string' && !['_p_', '_api_c2_'].includes(param_prefix))) param_prefix = '_p_';
 
 
     /**
@@ -19,7 +22,7 @@ exports.convert = (obj) => {
 
         Object.keys(obj).forEach(key => {
 
-            let cell = obj[key], key_new = `_p_${key}`;
+            let cell = obj[key], key_new = `${param_prefix}${key}`;
 
             if (key_parent && !is_array) key_new = `${key_parent}.${key}`;
 
@@ -41,7 +44,7 @@ exports.convert = (obj) => {
 
             } else if (Array.isArray(cell)) {
 
-                if ( typeof cell[0] === 'object' ) {
+                if (typeof cell[0] === 'object') {
 
                     result[key_new] = [];
 
