@@ -1,7 +1,7 @@
 {
-  "name": "json-to-bubble-object",
-  "version": "1.0.5",
-  "description": "Convert a JSON object to a Bubble object for plugin purposes. (Bubble.is)",
+  "name": "@bacalaocortao/json-to-bubble-object",
+  "version": "1.0.6",
+  "description": "Convert a JSON object to a Bubble object for plugin purposes. (Bubble.io)",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
