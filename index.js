@@ -9,6 +9,8 @@ exports.convert = (obj, param_prefix) => {
 
     if (typeof param_prefix !== 'string' || !param_prefix || (typeof param_prefix === 'string' && !['_p_', '_api_c2_'].includes(param_prefix))) param_prefix = '_p_';
 
+    const array_items_key = `${param_prefix}__items__`;
+
 
     /**
      * @param {Object} obj
@@ -44,7 +46,17 @@ exports.convert = (obj, param_prefix) => {
 
             } else if (Array.isArray(cell)) {
 
-                if (typeof cell[0] === 'object') {
+                if (!cell.length) {
+
+                    result[key_new] = [];
+
+                } else if (Array.isArray(cell[0])) {
+
+                    result[key_new] = cell.map(value => ({
+                        [array_items_key]: value
+                    }));
+
+                } else if (typeof cell[0] === 'object' && cell[0] !== null) {
 
                     result[key_new] = [];
 
