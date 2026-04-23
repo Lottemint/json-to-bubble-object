@@ -1,0 +1,10 @@
+# Ignore tests and other dev files from the npm package
+test/
+test/*
+test-suite-bubble-special-characters.json
+npm-debug.log
+package-lock.json
+.vscode/
+*.log
+.gitignore
+README-dev.md

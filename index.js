@@ -5,7 +5,8 @@
  */
 exports.convert = (obj, param_prefix) => {
 
-    if (typeof obj !== 'object' || (obj && Array.isArray(obj))) return {};
+    // Treat null, non-objects and arrays as invalid input -> return empty object
+    if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) return {};
 
     if (typeof param_prefix !== 'string' || !param_prefix || (typeof param_prefix === 'string' && !['_p_', '_api_c2_'].includes(param_prefix))) param_prefix = '_p_';
 
@@ -24,7 +25,7 @@ exports.convert = (obj, param_prefix) => {
 
         Object.keys(obj).forEach(key => {
 
-            let cell = obj[key], key_new = `${param_prefix}${key}`;
+            let cell = obj[key], key_new = `${param_prefix}${key.replace('.','__dot__')}`;
 
             if (key_parent && !is_array) key_new = `${key_parent}.${key}`;
 

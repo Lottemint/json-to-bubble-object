@@ -1,0 +1,39 @@
+{
+  "@metadata.context": "testing at symbol and dot",
+  "field-with-dash": "testing hyphen/dash",
+  "field/with/slash": "testing forward slash",
+  "field\\with\\backslash": "testing backslash",
+  "field with space": "testing space",
+  "field*with*asterisk": "testing asterisk",
+  "field?with?question": "testing question mark",
+  "field:with:colon": "testing colon",
+  "field$with$dollar": "testing dollar sign",
+  "field#with#hash": "testing hash/pound",
+  "field%with%percent": "testing percent",
+  "field&with&ampersand": "testing ampersand",
+  "field+with+plus": "testing plus",
+  "field=with=equals": "testing equals",
+  "field|with|pipe": "testing pipe",
+  "field<with>angles": "testing angle brackets",
+  "field[with]brackets": "testing square brackets",
+  "field{with}braces": "testing curly braces",
+  "field(with)parens": "testing parentheses",
+  "field'with'apostrophe": "testing apostrophe",
+  "field\"with\"quote": "testing double quote",
+  "field;with;semicolon": "testing semicolon",
+  "field,with,comma": "testing comma",
+  "field~with~tilde": "testing tilde",
+  "field`with`backtick": "testing backtick",
+  "field!with!exclamation": "testing exclamation mark",
+  "field^with^caret": "testing caret",
+  "multiple@special-chars.test": "testing multiple special chars",
+  "normal_field_underscore": "testing underscore (usually allowed)",
+  "normalField123": "testing normal alphanumeric",
+  "value": [
+    {
+      "@nested.field": "nested with special chars",
+      "nested-dash": "nested dash value",
+      "nested/slash": "nested slash value"
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 {
-  "name": "json-to-bubble-object",
-  "version": "1.0.5",
-  "description": "Convert a JSON object to a Bubble object for plugin purposes. (Bubble.is)",
+  "name": "@bacalaocortao/json-to-bubble-object",
+  "version": "1.0.6",
+  "description": "Convert a JSON object to a Bubble object for plugin purposes. (Bubble.io)",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [
     "bubble.is"
   ],
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Lottemint/json-to-bubble-object/issues"
   },
-  "homepage": "https://github.com/Lottemint/json-to-bubble-object#readme"
+  "homepage": "https://github.com/Lottemint/json-to-bubble-object#readme",
+  "devDependencies": {
+    "mocha": "^10.8.2"
+  }
 }

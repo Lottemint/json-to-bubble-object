@@ -1,6 +1,6 @@
 # json-to-bubble-object
 
-Convert a JSON object to a Bubble object for plugin purposes. (Bubble.is)
+Convert a JSON object to a Bubble object for plugin purposes. (Bubble.io)
 <br>
 <br>This module relates to the following topic:
 <br>https://forum.bubble.io/t/output-an-object-for-server-side-client-side/59419
@@ -32,6 +32,7 @@ const {convert} = require('json-to-bubble-object');
 
 ```javascript
 let obj = {
+    "@metadata.context": "testing at symbol and dot",
     "status": "success",
     "locale": "tr",
     "systemTime": 1470731191116,
@@ -119,6 +120,7 @@ console.log(JSON.stringify(convert(obj)));
 
 ```json
 {
+  "_p_@metadata__dot__context": "testing at symbol and dot",
   "_p_status": "success",
   "_p_locale": "tr",
   "_p_systemTime": 1470731191116,
